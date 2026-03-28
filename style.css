@@ -1,0 +1,35 @@
+@font-face {
+    font-family: oravenue;
+    src: url(Font/OrangeAvenueDEMO-Regular.otf);
+}
+html{
+    font-family: oravenue;
+}
+header{
+    background-color: salmon;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    padding-top: 0px;
+}
+header h1{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+main{
+    margin-top: 90px;
+}
+.Gen1, .Gen2, .Gen3{
+    background-color: rgb(0, 234, 255);
+    border: 1px solid black;
+    text-align: center;
+    margin-block: 20px;
+    margin-inline: 325px;
+
+}
