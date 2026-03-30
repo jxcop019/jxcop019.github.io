@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>DEK PALANG SIB</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Snow Effect -->
+    <div class="snow-area" aria-hidden="true">
+        <div class="flake"></div> <div class="flake"></div> <div class="flake"></div> <div class="flake"></div>
+        <div class="flake"></div> <div class="flake"></div> <div class="flake"></div> <div class="flake"></div>
+        <div class="flake"></div> <div class="flake"></div> <div class="flake"></div> <div class="flake"></div>
+        <div class="flake"></div> <div class="flake"></div> <div class="flake"></div> <div class="flake"></div>
+        <div class="flake"></div> <div class="flake"></div> <div class="flake"></div> <div class="flake"></div>
+    </div>
+
+
+    <!-- Logo -->
+    <div data-aos="zoom-out">
+        <div class="logo">
+            <a href=""><img src="img/logo.png" alt="logo"></a>
+        </div>
+    </div>
+
+
+    <div class="content">
+
+
+       
+        <div data-aos="zoom-out">
+            <div class="box">
+                <div class="container">
+                    <div class="heading">Sign In</div>
+                        <form class="form" action="">
+                            <input
+                            placeholder="First name"
+                            id="email"
+                            name="email"
+                            type="text"
+                            class="input"
+                            required=""
+                                />
+                            <input
+                            placeholder="Student ID"
+                            id="password"
+                            name="password"
+                            type="password"
+                            class="input"
+                            required=""
+                                />
+                                <span class="forgot-password"><a href="#" id="howToBtn">How to Sign In ?</a></span>
+                                <input value="Sign In" type="button" id="loginBtn" class="login-button" />
+                        </form> 
+                </div>
+            </div>
+        </div>
+
+    </div>    
+
+
+
+    <div class="copyright">
+        <p>Copyright © 2026 <span class="copyright-text">DEK PALANG SIB</span>. All rights reserved.</p>
+    </div>
+
+
+    <div id="statusModal" class="status-overlay">
+        <div class="status-content">
+            <div id="statusIcon" class="status-icon"></div>
+            <h2 id="statusTitle">หัวข้อ</h2>
+            <p id="statusMsg">ข้อความแจ้งเตือน</p>
+            <button id="statusBtn" class="status-btn">ตกลง</button>
+        </div>
+    </div>
+
+
+    <div id="adModal" class="ad-overlay">
+        <div class="ad-content">
+            <span class="ad-close-x">&times;</span>
+            <div class="ad-body">
+                <h2 style="color: #000000;">📢 วิธีการเข้าสู่ระบบ</h2>
+                <p>dek palang sib's web</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>Username(ช่องบน) กรอกชื่อจริงของคุณ</li>
+                    <li type="circle">โดยให้กรอกเป็นภาษาไทย</li>
+                    <li type="circle">และไม่ใส่คำนำหน้าชื่อ</li>
+                    <li type="circle">ตัวอย่างเช่น สมใจ</li>
+                    <br>
+                    <li>Password(ช่องล่าง) กรอกรหัสนักเรียนของคุณ</li>
+                    <li type="circle">ตัวอย่างเช่น 12345</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <button id="closeAdBtn" class="ad-btn-ok">ตกลง เข้าใจแล้ว</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- เปิดเพลงงงงงงงงงงงงงงงงงงงงงงงงงง -->
+    <div class="music-player-v2">
+    <div id="player-card" class="player-card-v2">
+        <div class="track-header">
+            <div class="playing-status"></div>
+            <span id="display-name">song.mp3</span>
+        </div>
+        
+        <div class="controls-row">
+            <button onclick="playMusic()" class="btn-play">PLAY</button>
+            <button onclick="pauseMusic()" class="btn-pause">PAUSE</button>
+        </div>
+
+        <div class="volume-row">
+            <span class="vol-icon">🔈</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" oninput="adjustVolume(this.value)">
+        </div>
+    </div>
+
+    <button class="main-music-btn" onclick="togglePlayerCard()">🎵</button>
+
+    <audio id="main-audio-file">
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+
+    
+    <audio id="successSound" src="success.mp3"></audio>
+    <audio id="errorSound" src="error.mp3"></audio>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="login.js"></script>
+</body>
+</html>
+
